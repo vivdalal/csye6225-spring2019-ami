@@ -1,5 +1,14 @@
 # AWS AMI for CSYE 6225
 
+## Team Information
+
+| Name | NEU ID | Email Address |
+| --- | --- | --- |
+| | | |
+| | | |
+| | | |
+| | | |
+
 ## Validate Template
 
 ```
