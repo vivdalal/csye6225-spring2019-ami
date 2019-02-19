@@ -24,7 +24,14 @@
                     "volume_type": "gp2",
                     "delete_on_termination": true
                 }
-            ]
+            ],
+	    "tags": {
+		"Source_AMI": "{{user `source_ami`}}",
+                "OS": "CentOS 7",
+        	"Release": "1901_01",
+        	"Runner": "EC2",
+		"Name": "CloudNinja"
+      	    }
         }
     ],
     "provisioners": [
