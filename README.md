@@ -13,7 +13,7 @@
 ## Validate Template
 
 ```
-packer validate ubuntu-ami.json
+packer validate centos-ami-template.json
 ```
 
 ## Build AMI
@@ -24,5 +24,5 @@ packer build \
     -var 'aws_secret_key=REDACTED' \
     -var 'aws_region=us-east-1' \
     -var 'subnet_id=REDACTED' \
-    ubuntu-ami.json
+    centos-ami-template.json
 ```
