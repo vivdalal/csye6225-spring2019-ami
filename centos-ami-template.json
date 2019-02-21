@@ -37,9 +37,6 @@
     "provisioners": [
         {
             "type": "shell",
-            "environment_vars": [
-                "FOO=foo"
-            ],
             "inline": [
 		"echo 'cleaning cache'",
                 "sudo yum clean all",
