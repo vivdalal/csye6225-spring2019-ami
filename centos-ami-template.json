@@ -38,16 +38,15 @@
         {
             "type": "shell",
             "inline": [
-		"echo 'cleaning cache'",
-                "sudo yum clean all",
-		"sudo yum makecache",
-		"echo 'installing oracle jdk 8u201'",
-		"cd ~",
-		"sudo yum install wget -y",
-		"wget --no-cookies --no-check-certificate --header 'Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie' 'https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.rpm'",
-		"sudo yum localinstall jdk-8u201-linux-x64.rpm -y",
-		"java -version",
-		"echo 'installed java successfully.'"
+          		"echo 'cleaning cache'",
+              "sudo yum clean all",
+          		"sudo yum makecache",
+          		"echo 'installing Open jdk 8'",
+          		"cd ~",
+          		"sudo yum install wget -y",
+          		"sudo yum install java-1.8.0-openjdk -y",
+          		"java -version",
+          		"echo 'installed java successfully.'"
             ]
         }
     ]
