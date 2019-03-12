@@ -16,7 +16,6 @@
 packer validate centos-ami-template.json
 ```
 
-
 ## Build AMI
 
 ```
