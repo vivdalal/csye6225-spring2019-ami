@@ -18,6 +18,7 @@ packer validate centos-ami-template.json
 
 ## Build AMI
 
+
 ```
 packer build \
     -var 'aws_region=us-east-1' \
