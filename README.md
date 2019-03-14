@@ -18,10 +18,9 @@ packer validate centos-ami-template.json
 
 ## Build AMI
 
+
 ```
 packer build \
-    -var 'aws_access_key=REDACTED' \
-    -var 'aws_secret_key=REDACTED' \
     -var 'aws_region=us-east-1' \
     -var 'subnet_id=REDACTED' \
     centos-ami-template.json

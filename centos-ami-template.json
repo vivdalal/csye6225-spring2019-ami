@@ -9,8 +9,8 @@
     "builders": [
         {
             "type": "amazon-ebs",
-            "access_key": "{{user `aws_access_key`}}",
-            "secret_key": "{{user `aws_secret_key`}}",
+            "access_key": "{{user `AWS_ACCESS_KEY_ID`}}",
+            "secret_key": "{{user `AWS_SECRET_ACCESS_KEY`}}",
             "region": "{{user `aws_region`}}",
             "instance_type": "t2.micro",
             "source_ami": "{{user `source_ami`}}",
@@ -37,18 +37,10 @@
     "provisioners": [
         {
             "type": "shell",
-            "inline": [
-		"echo 'cleaning cache'",
-                "sudo yum clean all",
-		"sudo yum makecache",
-		"echo 'installing oracle jdk 8u201'",
-		"cd ~",
-		"sudo yum install wget -y",
-		"wget --no-cookies --no-check-certificate --header 'Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie' 'https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.rpm'",
-		"sudo yum localinstall jdk-8u201-linux-x64.rpm -y",
-		"java -version",
-		"echo 'installed java successfully.'"
-            ]
+            "scripts": [
+              "scripts/install-codedeploy-agent.sh",
+              "scripts/install-java.sh"
+              ]
         }
     ]
 }
