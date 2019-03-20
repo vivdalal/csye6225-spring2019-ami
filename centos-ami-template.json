@@ -39,7 +39,8 @@
             "type": "shell",
             "scripts": [
               "scripts/install-codedeploy-agent.sh",
-              "scripts/install-java.sh"
+              "scripts/install-java.sh",
+              "scripts/install-cloudwatch-agent.sh"
               ]
         }
     ]

@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo yum update
+sudo yum update -y
 sudo yum install ruby -y
 sudo yum install wget -y
 cd /home/centos
